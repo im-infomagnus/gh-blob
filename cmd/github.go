@@ -63,7 +63,7 @@ func uploadBlob(cmd *cobra.Command, args []string) error {
 	}
 
 	// Create context with appropriate timeout
-	ctx, cancel := context.WithTimeout(cmd.Context(), 30*time.Minute)
+	ctx, cancel := context.WithTimeout(cmd.Context(), 300*time.Minute)
 	defer cancel()
 
 	uploadArchiveResponse, err := github.UploadArchiveToGitHub(ctx, uploadArchiveInput)
